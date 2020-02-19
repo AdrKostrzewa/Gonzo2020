@@ -1,10 +1,12 @@
+package start;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.xml.stream.events.StartElement;
+@SpringBootApplication
+public class GonzoStartApplication {
 
-public class StartApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplication.class, args);
+        SpringApplication.run(GonzoStartApplication.class, args);
     }
 }
