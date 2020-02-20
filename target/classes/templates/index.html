@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Hello World</title>
+
 </head>
 <body>
-<h1>Hello World</h1>
+<h1 align="center">Genealogical Tree</h1>
 
-<p th:text="${data.name}"></p>
-<p th:text="${data.lastname}"></p>
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Relation</th>
+        </tr>
+        <tr>
+            <td th:text="${data.name}"></td>
+            <td th:text="${data.lastname}"></td>
+            <td th:text="${data.age}"></td>
+            <td th:text="${relation.me}"></td>
+
+        </tr>
+        <tr>
+            <td th:text="${data2.name}"></td>
+            <td th:text="${data2.lastname}"></td>
+            <td th:text="${data2.age}"></td>
+            <td th:text="${relation.brother}"></td>
+
+        </tr>
+    </table>
+
 </body>
 </html>

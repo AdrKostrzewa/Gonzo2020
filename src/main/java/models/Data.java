@@ -3,10 +3,12 @@ package models;
 public class Data {
     String name;
     String lastname;
+    int age;
 
-    public Data(String name, String lastname) {
+    public Data(String name, String lastname, int age) {
         this.name = name;
         this.lastname = lastname;
+        this.age = age;
     }
 
     public Data() {
@@ -34,5 +36,13 @@ public class Data {
                 "name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
                 '}';
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
