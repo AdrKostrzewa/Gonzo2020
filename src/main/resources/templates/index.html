@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <style>
         table, th, td {
@@ -36,6 +37,13 @@
 <!--        </tr>-->
 <!--    </table>-->
 <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+
+            </tr>
+<!--    petla for each-->
 <tr th:each = "listek : ${list}">
 
     <td th:text="${listek.name}"></td>
@@ -43,6 +51,24 @@
     <td th:text="${listek.age}"></td>
 </tr>
 </table>
+
+
+<form th:action = "@{/add}" th:object = "${newData}" method="post">
+    <p>First name:</p>
+    <input type="text" th:field = "*{name}"><br>
+
+
+
+    <p>Last name:</p>
+    <input type="text" th:field = "*{lastName}"><br>
+
+    <p>Age:</p>
+    <input type="text" th:field = "*{age}"><br>
+
+        <p><input type="submit" value="Dodaj"></p>
+
+</form>
+
 
 </body>
 </html>

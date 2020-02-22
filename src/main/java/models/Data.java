@@ -1,6 +1,8 @@
 package models;
 
-public class Data {
+import java.util.List;
+
+public class Data  {
     String name;
     String lastName;
     int age;
