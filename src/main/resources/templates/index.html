@@ -13,28 +13,36 @@
 <body>
 <h1 align="center">Genealogical Tree</h1>
 
-    <table style="width:100%">
-        <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-            <th>Relation</th>
-        </tr>
-        <tr>
-            <td th:text="${data.name}"></td>
-            <td th:text="${data.lastname}"></td>
-            <td th:text="${data.age}"></td>
-            <td th:text="${relation.me}"></td>
+<!--    <table style="width:100%">-->
+<!--        <tr>-->
+<!--            <th>Firstname</th>-->
+<!--            <th>Lastname</th>-->
+<!--            <th>Age</th>-->
+<!--            <th>Relation</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text="${data.name}"></td>-->
+<!--            <td th:text="${data.lastname}"></td>-->
+<!--            <td th:text="${data.age}"></td>-->
+<!--            <td th:text="${relation.me}"></td>-->
 
-        </tr>
-        <tr>
-            <td th:text="${data2.name}"></td>
-            <td th:text="${data2.lastname}"></td>
-            <td th:text="${data2.age}"></td>
-            <td th:text="${relation.brother}"></td>
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text="${data2.name}"></td>-->
+<!--            <td th:text="${data2.lastname}"></td>-->
+<!--            <td th:text="${data2.age}"></td>-->
+<!--            <td th:text="${relation.brother}"></td>-->
 
-        </tr>
-    </table>
+<!--        </tr>-->
+<!--    </table>-->
+<table style="width:100%">
+<tr th:each = "listek : ${list}">
+
+    <td th:text="${listek.name}"></td>
+    <td th:text="${listek.lastName}"></td>
+    <td th:text="${listek.age}"></td>
+</tr>
+</table>
 
 </body>
 </html>

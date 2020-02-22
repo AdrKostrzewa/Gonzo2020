@@ -2,12 +2,12 @@ package models;
 
 public class Data {
     String name;
-    String lastname;
+    String lastName;
     int age;
 
-    public Data(String name, String lastname, int age) {
+    public Data(String name, String lastName, int age) {
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
         this.age = age;
     }
 
@@ -22,19 +22,19 @@ public class Data {
         this.name = name;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
         return "Data{" +
                 "name='" + name + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastname='" + lastName + '\'' +
                 '}';
     }
 
