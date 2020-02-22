@@ -6,6 +6,39 @@ public class Data  {
     String name;
     String lastName;
     int age;
+    Character sex ;
+    int heigth;
+    int weigth;
+
+
+    public Character getSex() {
+        return sex;
+    }
+
+    public void setSex(Character sex) {
+        this.sex = sex;
+    }
+
+    public int getHeigth() {
+        return heigth;
+    }
+
+    public void setHeigth(int heigth) {
+        this.heigth = heigth;
+    }
+
+    public int getWeigth() {
+        return weigth;
+    }
+
+    public void setWeigth(int weigth) {
+        this.weigth = weigth;
+    }
+
+    public Data(Character sex, int heigth) {
+        this.sex = sex;
+        this.heigth = heigth;
+    }
 
     public Data(String name, String lastName, int age) {
         this.name = name;

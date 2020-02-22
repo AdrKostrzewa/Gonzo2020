@@ -42,6 +42,7 @@
                 <th>Lastname</th>
                 <th>Age</th>
 
+
             </tr>
 <!--    petla for each-->
 <tr th:each = "listek : ${list}">
@@ -49,6 +50,8 @@
     <td th:text="${listek.name}"></td>
     <td th:text="${listek.lastName}"></td>
     <td th:text="${listek.age}"></td>
+
+
 </tr>
 </table>
 
@@ -65,8 +68,22 @@
     <p>Age:</p>
     <input type="text" th:field = "*{age}"><br>
 
+<!--    <p>Sex:</p>-->
+<!--    <input type="checkbox" th:field = "*{sex}"><br>-->
+
+
+
+
+<!--    <td th:switch="*{sex}">-->
+<!--        <span th:case="'M'" th:text="Male" />-->
+<!--        <span th:case="'F'" th:text="Female" />-->
+<!--    </td>-->
+
         <p><input type="submit" value="Dodaj"></p>
 
+</form>
+<form th:action = "@{/sort}" th:object = "${newData}" method="post">
+    <input type="submit" value="Posortuj według wieku">
 </form>
 
 

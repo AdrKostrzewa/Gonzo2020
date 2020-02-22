@@ -33,15 +33,23 @@ public class GonzoController {
 
     //ModelAttribiute aby z widoku można było dodawać do controllera
     @PostMapping("/add")
-    public String  add(@ModelAttribute Data data){
+    public String  add(@ModelAttribute Data data) {
         list.add(data);
-        Collections.sort(list, Comparator.comparingInt(Data::getAge));
+//        Collections.sort(list, Comparator.comparingInt(Data::getAge));
 
         System.out.println(data);
 
         return "redirect:/";
+    }
+
+
+    @PostMapping("/sort")
+    public String sort(Data data) {
+        Collections.sort(list, Comparator.comparingInt(Data::getAge));
+        return "redirect:/";
+    }
         //zamiast do widoku przenosi do metody "/"
 
 
     }
-}
+
