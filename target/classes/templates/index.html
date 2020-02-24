@@ -41,15 +41,19 @@
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Age</th>
+                <th>Heigth</th>
+                <th>Weigth</th>
 
 
             </tr>
 <!--    petla for each-->
 <tr th:each = "listek : ${list}">
 
-    <td th:text="${listek.name}"></td>
-    <td th:text="${listek.lastName}"></td>
-    <td th:text="${listek.age}"></td>
+    <td th:text="${listek.name}" align="center"></td>
+    <td th:text="${listek.lastName}" align="center"></td>
+    <td th:text="${listek.age}" align="center"></td>
+    <td th:text="${listek.heigth}" align="center"></td>
+    <td th:text="${listek.weigth}" align="center"></td>
 
 
 </tr>
@@ -63,10 +67,16 @@
 
 
     <p>Last name:</p>
-    <input type="text" th:field = "*{lastName}"><br>
+    <input type="text" th:field = "*{lastName}" ><br>
 
     <p>Age:</p>
-    <input type="text" th:field = "*{age}"><br>
+    <input type="text" th:field = "*{age}" size="4"><br>
+
+    <p>Heigth:</p>
+    <input type="text" th:field = "*{heigth}" size="4"><br>
+
+    <p>Weigth:</p>
+    <input type="text" th:field = "*{weigth}" size="4"><br>
 
 <!--    <p>Sex:</p>-->
 <!--    <input type="checkbox" th:field = "*{sex}"><br>-->
