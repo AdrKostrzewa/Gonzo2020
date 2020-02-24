@@ -41,6 +41,8 @@
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Age</th>
+                <th>Heigth</th>
+                <th>Weigth</th>
 
 
             </tr>
@@ -50,6 +52,8 @@
     <td th:text="${listek.name}"></td>
     <td th:text="${listek.lastName}"></td>
     <td th:text="${listek.age}"></td>
+    <td th:text="${listek.heigth}"></td>
+    <td th:text="${listek.weigth}"></td>
 
 
 </tr>
@@ -67,6 +71,12 @@
 
     <p>Age:</p>
     <input type="text" th:field = "*{age}"><br>
+
+    <p>Heigth:</p>
+    <input type="text" th:field = "*{heigth}"><br>
+
+    <p>Weigth:</p>
+    <input type="text" th:field = "*{weigth}"><br>
 
 <!--    <p>Sex:</p>-->
 <!--    <input type="checkbox" th:field = "*{sex}"><br>-->

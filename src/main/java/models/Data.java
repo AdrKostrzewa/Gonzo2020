@@ -10,6 +10,10 @@ public class Data  {
     int heigth;
     int weigth;
 
+    public Data(int heigth, int weigth) {
+        this.heigth = heigth;
+        this.weigth = weigth;
+    }
 
     public Character getSex() {
         return sex;
