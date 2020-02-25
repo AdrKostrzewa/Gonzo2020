@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.swing.plaf.basic.BasicDesktopIconUI;
+import java.lang.annotation.ElementType;
 import java.util.*;
 
 @Controller
 public class GonzoController {
         List <Data> list;
+        int sum;
     public GonzoController() {
 //        Data data = new Data("Adrian", "Kostrzewa", 18);
 //        Data data2 = new Data("Marcin", "Rasiak", 24);
@@ -26,8 +29,10 @@ public class GonzoController {
 
     @GetMapping("/")
     public String get(Model model) {
+        Data data = new Data();
         model.addAttribute("list", list);
         model.addAttribute("newData", new Data ());
+        model.addAttribute("sum", sum);
         return "index";
     }
 
@@ -48,7 +53,23 @@ public class GonzoController {
         Collections.sort(list, Comparator.comparingInt(Data::getAge));
         return "redirect:/";
     }
-        //zamiast do widoku przenosi do metody "/"
+
+    @PostMapping("/sum")
+    public String countBMI(Model model  ) {
+//        int result = data.getHeigth()*data.getWeigth();
+//        model.addAttribute("result", result );
+
+        for (Data element : list) {
+
+            sum= element.getWeigth() + sum;
+        }
+
+        model.addAttribute("sum", sum);
+
+        return "redirect:/";
+    }
+
+       //zrobić sum
 
 
     }

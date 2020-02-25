@@ -96,6 +96,13 @@
     <input type="submit" value="Posortuj według wieku">
 </form>
 
+<form th:action = "@{/sum}" th:object = "${sum}" method="post">
+    <input type="submit" value="Oblicz sumę wagi">
+    <td th:text="${sum}" align="center"></td>
+</form>
+
+
+
 
 </body>
 </html>

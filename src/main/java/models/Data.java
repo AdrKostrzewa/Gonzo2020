@@ -9,6 +9,20 @@ public class Data  {
     Character sex ;
     int heigth;
     int weigth;
+    int  sum;
+
+
+    public Data(int sum) {
+        this.sum = sum;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
 
     public Data(int heigth, int weigth) {
         this.heigth = heigth;
