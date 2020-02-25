@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:border="http://www.w3.org/1999/xhtml">
 <head>
     <style>
         table, th, td {
             border: 1px solid black;
+        }
+        div{
+            width: 15%;
+            border: double;
+        }
+        button {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/133/727/original/WoodBackground54342.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/133/727/original/WoodBackground54342.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
     </style>
     <meta charset="UTF-8">
@@ -58,24 +75,27 @@
 
 </tr>
 </table>
-
-
+<br>
+<br>
+<br>
+<br>
+<div  >
 <form th:action = "@{/add}" th:object = "${newData}" method="post">
-    <p>First name:</p>
+    <p><b>First name:</b></p>
     <input type="text" th:field = "*{name}"><br>
 
 
 
-    <p>Last name:</p>
+    <p><b>Last name:</b></p>
     <input type="text" th:field = "*{lastName}" ><br>
 
-    <p>Age:</p>
+    <p><b>Age:</b></p>
     <input type="text" th:field = "*{age}" size="4"><br>
 
-    <p>Heigth:</p>
+    <p><b>Heigth:</b></p>
     <input type="text" th:field = "*{heigth}" size="4"><br>
 
-    <p>Weigth:</p>
+    <p><b>Weigth:</b></p>
     <input type="text" th:field = "*{weigth}" size="4"><br>
 
 <!--    <p>Sex:</p>-->
@@ -89,12 +109,21 @@
 <!--        <span th:case="'F'" th:text="Female" />-->
 <!--    </td>-->
 
-        <p><input type="submit" value="Dodaj"></p>
+        <p><input type="submit" value="Add new person"></p>
+
 
 </form>
+</div>
 <form th:action = "@{/sort}" th:object = "${newData}" method="post">
-    <input type="submit" value="Posortuj według wieku">
+    <input type="submit" class="block"  value="Sort by the age">
 </form>
+
+<form th:action = "@{/sum}" th:object = "${sum}" method="post">
+    <input type="submit" value="Sum of weight">
+    <td th:text="${sum}" align="center"></td>
+</form>
+
+
 
 
 </body>
